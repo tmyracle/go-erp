@@ -35,6 +35,7 @@ func setupRouter() *gin.Engine {
 	})
 	// Get accounts
 	r.GET("/api/accounts", handlers.GetAccounts)
+	r.GET("/api/accounts/:id", handlers.GetAccount)
 	r.POST("/api/accounts", handlers.CreateAccount)
 
 	return r
